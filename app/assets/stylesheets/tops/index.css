@@ -1,0 +1,27 @@
+.top-title{
+  font-size: 40px;
+  text-align: center;
+  background-color: aquamarine;
+}
+
+.top-form{
+  display: flex;
+  justify-content: space-around;
+}
+
+.session{
+  font-size: 25px;
+}
+
+.top-image{
+  text-align: center;
+  margin-top: 30px;
+}
+
+.profile-present{
+  display: flex;
+}
+
+.bye{
+  margin-left: 50px;
+}

@@ -1,0 +1,99 @@
+<div class = "new-title-area">
+<h1 class = "new-title">プロフィール作成<h1>
+</div>
+<div class = "back-title">
+  <%= link_to "戻る", root_path %>
+</div>
+
+<%= form_with model: @profile, local: true do |f| %>
+<div class = "all-profile">
+   <div class = "image">
+     <div class = "image-title">
+        <label class="form-text">写真をアップロード</label>
+     </div>
+     <div class = "image-select">
+        <%= f.file_field :image, id:"comment-image" %>
+    </div>
+   </div>
+   <br>
+  <div class = "nickname-hobby">
+     <div class = "nickname">
+       <label class="form-text">ニックネーム</label><br>
+       <%= f.text_field :nickname, class: "profile-nickname" %>
+     </div>
+     <div class = "hobby">
+       <label class="form-text">趣味</label><br>
+       <%= f.text_field :hobby, class: "profile-hobby" %>
+     </div>
+     <div class='birth'>
+       <label class="form-text">生年月日</label><br>
+       <%= raw sprintf(
+                  f.date_select(
+                    :birthday,
+                    class:'select-birth',
+                    id:"birth-date",
+                    use_month_numbers: true,
+                    prompt:'--',
+                    start_year: 1940,
+                    end_year: (Time.now.year - 20),
+                    date_separator: '%s'),
+                  " 年 ", " 月 ") + " 日 " %>
+    </div>
+  </div>
+  <br>
+  <div class = "birth-salary">
+    <div class = "birth">
+      <label class="form-text">出身</label>
+      <%= f.collection_select(:birth_id, Birth.all, :id, :name, {}, {class:"profile-box", id:"item-scheduled-delivery"}) %>
+    </div>
+    <div class = "live">
+    <label class="form-text">住所</label>
+    <%= f.collection_select(:live_id, Live.all, :id, :name, {}, {class:"profile-box", id:"item-scheduled-delivery"}) %>
+    </div>
+    <div class = "school">
+    <label class="form-text">学歴</label>
+    <%= f.collection_select(:school_id, School.all, :id, :name, {}, {class:"profile-box", id:"item-scheduled-delivery"}) %>
+    </div>
+    <div class = "occupation">
+    <label class="form-text">職業</label>
+    <%= f.collection_select(:occupation_id, Occupation.all, :id, :name, {}, {class:"occupation-box", id:"item-scheduled-delivery"}) %>
+    </div>
+    <div class = "salary">
+      <label class="form-text">給料</label><br>
+      <%= f.text_field :salary, class: "salary-text" %>万円
+    </div>
+  </div>
+  <br>
+  <div class = "drink-money">
+    <div class = "drink">
+    <label class="form-text">飲酒</label>
+    <%= f.collection_select(:drink_id, Drink.all, :id, :name, {}, {class:"profile-box", id:"item-scheduled-delivery"}) %>
+    </div>
+    <div class = "smoke">
+    <label class="form-text">タバコ</label>
+    <%= f.collection_select(:smoke_id, Smoke.all, :id, :name, {}, {class:"profile-box", id:"item-scheduled-delivery"}) %>
+    </div>
+    <div class = "marry">
+    <label class="form-text">婚姻歴</label>
+    <%= f.collection_select(:marry_id, Marry.all, :id, :name, {}, {class:"profile-box", id:"item-scheduled-delivery"}) %>
+    </div>
+    <div class = "sex">
+    <label class="form-text">性別</label>
+    <%= f.collection_select(:sex_id, Sex.all, :id, :name, {}, {class:"profile-box", id:"item-scheduled-delivery"}) %>
+    </div>
+    <div class = "money">
+    <label class="form-text">会員</label>
+    <%= f.collection_select(:money_id, Money.all, :id, :name, {}, {class:"profile-box", id:"item-scheduled-delivery"}) %>
+    </div>
+  </div>
+  <br>
+   <div class = "message">
+    <label class="form-text">自己紹介</label><br>
+    <%= f.text_area :info, class:"comments-text", id:"comment-text", placeholder:"自己紹介文を書きましょう(1,000文字まで)" ,rows:"7" ,maxlength:"1000" %>
+   </div>
+   <div class = "message-btn">
+     <%= f.submit "登録する" ,class:"sell-btn" %>
+   </div>
+</div>
+</div>
+<% end %>

@@ -1,0 +1,24 @@
+<div class="side-bar-header">
+  <div class="matching-names">
+    <%#= link_to edit_user_path(current_user) do %>
+      <%= "マッチングしたお相手一覧" %>
+    <%# end %>
+  </div>
+</div>
+
+<div class="rooms">
+  <% @thanks.each do |thank| %>
+    <div class="room">
+    <% if thank.profile_id == current_user.profile.id %>
+      <% profile = Profile.find_by(id: thank.vote_profile_id) %>
+       <div class="room-name">
+        <%= link_to profile.nickname, thank_messages_path(thank.id) %>
+      </div>
+    <% else %>
+      <div class="room-name">
+        <%= link_to thank.profile.nickname, thank_messages_path(thank.id) %>
+      </div>
+    <% end %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,28 @@
+<div class="side-bar-header">
+  <div class="matching-names">
+    <%#= link_to edit_user_path(current_user) do %>
+      <%= "お相手の名前" %>
+    <%# end %>
+  </div>
+  <div class="create-room">
+    <%#= link_to "チャットを作成する", new_room_path %>
+  </div>
+</div>
+
+<div class="rooms">
+  <% if current_user.profile.id == @thank.profile_id %>
+     <% profile = Profile.find_by(id: @thank.vote_profile_id) %>
+     <div class="room">
+      <div class="room-name-message">
+        <%= profile.nickname %>
+      </div>
+    </div>
+  <% else %>
+     <% profile = Profile.find_by(id: @thank.profile.id) %>
+     <div class="room">
+      <div class="room-name-message">
+        <%= profile.nickname %>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,37 @@
+<% if current_user.sex_id == 1 %>
+<h1 class = "index-title">女性会員一覧</h1>
+<% else %>
+<h1 class = "index-title">男性会員一覧</h1>
+<% end %>
+
+<div class = "profile-back">
+  <div class = "change">
+    <%= link_to "マイページ", profile_path(current_user.profile.id), method: :get %>
+  </div>
+  <div class = "change">
+  <%= link_to "プロフィールを変更する", edit_profile_path(current_user.profile.id), class: "profile-post" %>
+  </div>
+  <div class = "change">
+    <%= link_to "成立した人", profile_result_index_path(current_user.profile.id), method: :get %>
+  </div>
+     <% if current_user.profile.money_id == 2 %>
+       <div class = "change">
+        <%= link_to "メッセージ", thanks_path %>
+      </div>
+      <% end %>
+  <div class = "change">
+    <%= link_to "戻る", root_path, class: "back-root" %>
+  </div>
+</div>
+
+<div class = "user-profiles">
+  <% @profiles.each do |profile| %>
+     <div class = "users-image">
+       <div class = "images-top">
+         <%= image_tag profile.image, size: '300x300' %>
+      </div>
+       <div><%=  profile.nickname %></div>
+       <div><%= link_to "この会員のプロフィールを見る", profile_path(profile.id) %></div>
+    </div>
+  <% end %>
+</div>

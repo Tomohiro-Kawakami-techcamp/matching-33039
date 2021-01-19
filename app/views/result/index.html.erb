@@ -1,0 +1,16 @@
+<h2 class = "matching-result">マッチングした人</h2>
+   <div class = "back-profiles">
+   <%= link_to "戻る", profiles_path %>
+   </div>
+   <% @users.each do |user| %>
+     <% vote = Vote.where(profile_id: user.profile.id, voted_profile_id: current_user.profile.id) %>
+     <% voted = Vote.where(profile_id: current_user.profile.id, voted_profile_id: user.profile.id) %>
+     <% if vote.present? && voted.present? %>
+       <div>
+        <div class = "vote-list">
+           <div><%= user.profile.nickname %></div>
+           <div><%= image_tag user.profile.image, size: '300x300' %></div>
+       </div>
+       </div>
+     <% end %>
+   <% end %>

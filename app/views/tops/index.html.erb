@@ -1,0 +1,36 @@
+<% @title = "マッチングアプリXX" %>
+
+<div>
+<h1 class = "top-title"><%= @title %></h1>
+
+<div class = "top-form">
+<% if user_signed_in? %>
+ <div class = "session">
+  <% if current_user.profile.present? %>
+   <div class = "profile-present">
+   <div>
+    <%= link_to "お相手を探す", profiles_path %>
+  </div>
+   <div class = "bye">
+    <%= link_to "退会する", profiles_path, method: :delete %>
+  </div>
+  </div>
+  <% else %>
+    <%= link_to "プロフィールを登録する", new_profile_path %>
+  <% end %>
+ </div>
+ <div class = "session">
+  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+ </div>
+ <% else %>
+  <div class = "session">
+    <%= link_to "新規登録", new_user_registration_path  %>
+  </div>
+  <div class = "session">
+    <%= link_to "ログイン", new_user_session_path %>
+  </div>
+ <% end %>
+</div>
+<div class = "top-image">
+<%= image_tag "20180515-main.png", size: '1000x1000' %>
+</div>

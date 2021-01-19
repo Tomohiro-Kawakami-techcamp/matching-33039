@@ -1,0 +1,80 @@
+<h1 class = "show-title">プロフィール詳細<h1>
+<div class = "back-title">
+  <%= link_to "戻る", profiles_path %>
+</div>
+
+<div class = "show-image">
+   <%= image_tag @profile.image, size: '300x300' %>
+</div>
+
+<table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item1">自己紹介</th>
+          <td class="detail-value1"><%= @profile.info %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">ニックネーム</th>
+          <td class="detail-value"><%= @profile.nickname %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">趣味</th>
+          <td class="detail-value"><%= @profile.hobby %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">生年月日</th>
+          <td class="detail-value"><%= @profile.birthday %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">出身</th>
+          <td class="detail-value"><%= @profile.birth.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">現在の住所</th>
+          <td class="detail-value"><%= @profile.live.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">学歴</th>
+          <td class="detail-value"><%= @profile.school.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">職業</th>
+          <td class="detail-value"><%= @profile.occupation.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">給料</th>
+          <td class="detail-value"><%= @profile.salary %>万円</td>
+        </tr>
+        <tr>
+          <th class="detail-item">飲酒</th>
+          <td class="detail-value"><%= @profile.drink.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">タバコ</th>
+          <td class="detail-value"><%= @profile.smoke.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">婚姻歴</th>
+          <td class="detail-value"><%= @profile.marry.name %></td>
+        </tr>
+      </tbody>
+</table>
+<% if @profile.user.id != current_user.id %>
+  <div class = "button">
+   <% if current_user.already_voted?(@profile) %>
+      <div class = "result">
+         <%= 'いいね済み' %>
+      </div>
+   <% else %>
+     <%= button_to 'いいね', profile_votes_path(@profile), class: "btn-size" %>
+   <% end %>
+  </div>
+<%  else %>
+  <h2 class = "result">いいねした人</h2>
+  <% @users.each do |user| %>
+   <div class = "vote-list">
+     <div><%= link_to user.profile.nickname, profile_path(user.profile.id) %></div>
+     <div><%= image_tag user.profile.image, size: '300x300' %></div>
+  </div>
+   <% end %>
+<% end %>
