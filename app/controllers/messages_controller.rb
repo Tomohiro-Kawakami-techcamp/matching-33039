@@ -3,6 +3,9 @@ class MessagesController < ApplicationController
     @message = Message.new
     @thank = Thank.find(params[:thank_id])
     @messages = @thank.messages.includes(:thank)
+    unless @thank.profile_id == current_user.profile.id || @thank.vote_profile_id == current_user.profile.id
+      redirect_to thanks_path
+    end
   end
 
   def create

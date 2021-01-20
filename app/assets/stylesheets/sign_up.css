@@ -180,3 +180,8 @@
   width: 50%;
   height: 30px;
 }
+
+.errors{
+  text-align: left;
+  color: red;
+}
