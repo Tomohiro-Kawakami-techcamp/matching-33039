@@ -39,6 +39,7 @@ class ProfilesController < ApplicationController
   end
 
   def update
+    @profile = Profile.find(params[:id])
     if @profile.update(profile_params)
       redirect_to  profiles_path
     else
