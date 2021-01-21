@@ -12,7 +12,7 @@
     <%= link_to "お相手を探す", profiles_path %>
   </div>
    <div class = "bye">
-    <%= link_to "退会する", profiles_path, method: :delete %>
+    <%= link_to "退会する", profile_path(current_user.profile.id), method: :delete %>
   </div>
   </div>
   <% else %>

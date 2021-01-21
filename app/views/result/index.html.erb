@@ -3,14 +3,16 @@
    <%= link_to "戻る", profiles_path %>
    </div>
    <% @users.each do |user| %>
+   <% if user.profile.present? %>
      <% vote = Vote.where(profile_id: user.profile.id, voted_profile_id: current_user.profile.id) %>
      <% voted = Vote.where(profile_id: current_user.profile.id, voted_profile_id: user.profile.id) %>
-     <% if vote.present? && voted.present? %>
+       <% if vote.present? && voted.present? %>
        <div>
         <div class = "vote-list">
            <div><%= link_to user.profile.nickname, profile_path(user.profile.id) %></div>
            <div><%= image_tag user.profile.image, size: '300x300' %></div>
        </div>
        </div>
-     <% end %>
+       <% end %>
+    <% end %>
    <% end %>

@@ -73,8 +73,10 @@
   <h2 class = "result">いいねした人</h2>
   <% @users.each do |user| %>
    <div class = "vote-list">
+   <% if user.profile.present? %>
      <div><%= link_to user.profile.nickname, profile_path(user.profile.id) %></div>
      <div><%= image_tag user.profile.image, size: '300x300' %></div>
+   <% end %>
   </div>
    <% end %>
 <% end %>
