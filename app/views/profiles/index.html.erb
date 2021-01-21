@@ -25,7 +25,6 @@
 </div>
 
 <div class = "user-profiles">
-<%#= will_paginate @profiles %>
   <% @profiles.each do |profile| %>
      <div class = "users-image">
        <div class = "images-top">
@@ -36,4 +35,3 @@
     </div>
   <% end %>
 </div>
-<%#= will_paginate @profiles, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>

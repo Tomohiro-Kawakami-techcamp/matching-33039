@@ -8,7 +8,7 @@
      <% if vote.present? && voted.present? %>
        <div>
         <div class = "vote-list">
-           <div><%= user.profile.nickname %></div>
+           <div><%= link_to user.profile.nickname, profile_path(user.profile.id) %></div>
            <div><%= image_tag user.profile.image, size: '300x300' %></div>
        </div>
        </div>
