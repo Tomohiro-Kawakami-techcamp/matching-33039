@@ -2,10 +2,13 @@
 <h1 class = "new-title">プロフィール作成<h1>
 </div>
 <div class = "back-title">
-  <%= link_to "戻る", root_path %>
+  <%= link_to "戻る", profiles_path %>
 </div>
 
 <%= form_with model: @profile, local: true do |f| %>
+
+<%= render 'shared/error_messages', model: f.object %>
+
 <div class = "all-profile">
    <div class = "image">
      <div class = "image-title">

@@ -14,7 +14,7 @@ class ProfilesController < ApplicationController
   def create
     @profile = Profile.new(profile_params)
     if current_user.sex_id != @profile.sex_id
-      render :new
+      redirect_to  new_profile_path
     else
       if @profile.save
         redirect_to  profiles_path
