@@ -10,7 +10,7 @@
 | sex_id             | integer  | null: false |
 
 ### Association
-- has_many :profiles
+- has_one  :profile
 - has_many :votes
 
 ## profiles テーブル

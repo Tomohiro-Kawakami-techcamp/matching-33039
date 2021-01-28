@@ -4,6 +4,7 @@ class Profile < ApplicationRecord
   has_many :voted_users, through: :votes, source: :user
   has_one_attached :image
   has_many :messages
+  has_many :thanks
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :birth
