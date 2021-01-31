@@ -41,9 +41,17 @@
 
 # 実装予定の機能
 
+- 条件でお相手を検索する機能
+- ブロックする機能
 
 # ローカルでの動作方法
 
+- $ cd matching-33039
+- $ bundle install
+- $ rails db:create
+- $ rails db:migrate
+- $ rails s
+- http://localhost:3000
 
 # DB設計
 
