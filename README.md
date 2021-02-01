@@ -1,14 +1,36 @@
 # マッチングアプリ
 
+### 男女の出会いの場、男女をつなぐ
+
+<img width="1235" alt="33994b43a1a02ba353dc5422ae05b986" src="https://user-images.githubusercontent.com/75296964/106419319-9526f980-649b-11eb-98c9-91110b9c9d1b.png">
 
 # 概要
 
+### 人それぞれ出会いを求めて色々なマッチングアプリに登録していると思うがその1つ
 
 # テスト用アカウント
-
+- 男性用:userboy1@sample.co.jp
+- 女性用:usergirl@sample.co.jp
 
 # 利用方法
 
+### 活動開始まで
+#### 新規登録
+https://gyazo.com/8addd41f2e6618c7a3fe12f5444d4575
+
+#### プロフィール登録
+<img width="1256" alt="f74a80bf4127025bdaac424b5698d91c" src="https://user-images.githubusercontent.com/75296964/106419942-f7ccc500-649c-11eb-8b87-3bd2024e1a3a.png">
+
+https://gyazo.com/e85acba92b5dd3de4f373433d66d0e23
+
+### 活動開始〜マッチングするまで
+![4c67f45721f072d525074a47e95a4ef1](https://user-images.githubusercontent.com/75296964/106420784-b50bec80-649e-11eb-9f3f-a5e69f868dc3.jpg)
+
+https://gyazo.com/b160b9974db5bd930c19b49c95a96ad2
+https://gyazo.com/b2c19beb87163cd49fe15b752ef25787
+
+### マッチング後
+https://gyazo.com/87f67fa5a57d8ad275e0c368c12f957d
 
 # 目指したい課題解決
 
