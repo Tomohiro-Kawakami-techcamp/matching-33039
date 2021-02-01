@@ -19,17 +19,20 @@
 ![demo](https://gyazo.com/8addd41f2e6618c7a3fe12f5444d4575/raw)
 
 #### プロフィール登録
-##### こちらの項目に全て記入したのち、活動開始となります。
+##### (上)こちらの項目に全て記入したのち、活動開始となります。
+##### (下)女性会員を例にやっております。
 <img width="1256" alt="f74a80bf4127025bdaac424b5698d91c" src="https://user-images.githubusercontent.com/75296964/106419942-f7ccc500-649c-11eb-8b87-3bd2024e1a3a.png">
-
 ![demo](https://gyazo.com/e85acba92b5dd3de4f373433d66d0e23/raw)
 
 ### 活動開始〜マッチングするまで
 ##### ※👇男性会員の場合の画面です。
 ![4c67f45721f072d525074a47e95a4ef1](https://user-images.githubusercontent.com/75296964/106420784-b50bec80-649e-11eb-9f3f-a5e69f868dc3.jpg)
 
+##### ①男性会員が女性会員に対していいねを押します
 ![demo](https://gyazo.com/b160b9974db5bd930c19b49c95a96ad2/raw)
+##### ②女性会員がいいねで返事をします。
 ![demo](https://gyazo.com/b2c19beb87163cd49fe15b752ef25787/raw)
+#### これでマッチング成立となります。
 
 ### マッチング後
 ##### ※無料会員の場合、メッセージのやり取りはできません。
