@@ -22,6 +22,7 @@
 ##### (上)こちらの項目に全て記入したのち、活動開始となります。
 ##### (下)女性会員を例にやっております。
 <img width="1256" alt="f74a80bf4127025bdaac424b5698d91c" src="https://user-images.githubusercontent.com/75296964/106419942-f7ccc500-649c-11eb-8b87-3bd2024e1a3a.png">
+
 ![demo](https://gyazo.com/e85acba92b5dd3de4f373433d66d0e23/raw)
 
 ### 活動開始〜マッチングするまで
