@@ -9,8 +9,8 @@
 ### 人それぞれ出会いを求めて色々なマッチングアプリに登録していると思うがその1つ
 
 # テスト用アカウント
-- 男性用:userboy1@sample.co.jp
-- 女性用:usergirl@sample.co.jp
+- 男性用:userboy1@sample.co.jp パスワード:userboy1
+- 女性用:usergirl@sample.co.jp パスワード:usergirl1
 ※お手数ではありますが、プロフィール登録はお願いします。
 
 # 利用方法
