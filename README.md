@@ -11,6 +11,7 @@
 # テスト用アカウント
 - 男性用:userboy1@sample.co.jp
 - 女性用:usergirl@sample.co.jp
+※お手数ではありますが、プロフィール登録はお願いします。
 
 # 利用方法
 
